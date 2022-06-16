@@ -8,12 +8,13 @@ import jakarta.ws.rs.core.MediaType;
 
 import java.util.List;
 
+
 @Path("/movies")
 @Produces(MediaType.APPLICATION_JSON)
 
 public class MovieController {
 
-    private MovieService service = new MovieService();
+    private final MovieService service = new MovieService();
 
     @PUT
     @Consumes(MediaType.APPLICATION_JSON)
